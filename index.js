@@ -1,10 +1,10 @@
 import express from 'express';
-import mongoose from 'mongoose';
+import mongoose, { Model } from 'mongoose';
 import cors from'cors';
-import TodoModel from './models/TodoModel.js';
+import Model from './Models/Model.js';
 
 const app=express();
-const PORT=3005
+const PORT=process.env.PORT ?? 3005
  app.use(express.json());
  app.use(cors());
  mongoose.set('strictQuery',false)
@@ -16,9 +16,9 @@ const PORT=3005
 
 
  app.get('/todoitems', async(req,res)=>{
-    const items=await TodoModel.find();
-    console.log(items.length)
-    res.json(items)
+    const modelReq=await Model.find();
+    console.log(modelReq.length)
+    res.json(modelReq)
 
  });
 

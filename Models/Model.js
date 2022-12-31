@@ -1,7 +1,7 @@
 import mongoose from 'mongoose';
 const Schema=mongoose.Schema;
 
-const TodoSchema=new Schema({
+const ModelSchema=new Schema({
     text: {
         type: String,
         required:true
@@ -17,5 +17,5 @@ const TodoSchema=new Schema({
     }
 });
 
-    const TodoModel=mongoose.model('TodoModel', TodoSchema)
-    export default TodoModel
+    const Model=mongoose.model('TodoModel', ModelSchema)
+    export default Model
