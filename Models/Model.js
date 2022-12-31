@@ -7,15 +7,11 @@ const ModelSchema=new Schema({
         required:true
     },
     
-    completed:{
-    type:Boolean, 
-    default:false
-},
-    timestamp:{
+     timestamp:{
         type: String,
         default:Date.now()
     }
 });
 
-    const Model=mongoose.model('TodoModel', ModelSchema)
+    const Model=mongoose.model('Model', ModelSchema)
     export default Model

@@ -1,5 +1,5 @@
 import express from 'express';
-import mongoose, { Model } from 'mongoose';
+import mongoose from 'mongoose';
 import cors from'cors';
 import Model from './Models/Model.js';
 
@@ -8,14 +8,14 @@ const PORT=process.env.PORT ?? 3005
  app.use(express.json());
  app.use(cors());
  mongoose.set('strictQuery',false)
- mongoose.connect('mongodb://127.0.0.1:27017/newTodo', {
+ mongoose.connect('mongodb://127.0.0.1:27017/models', {
     useNewUrlParser: true, 
 	useUnifiedTopology: true 
 
  }).then(()=> console.log('Connected to MongoDB')).catch(console.error)
 
 
- app.get('/todoitems', async(req,res)=>{
+ app.get('/modelReq', async(req,res)=>{
     const modelReq=await Model.find();
     console.log(modelReq.length)
     res.json(modelReq)
