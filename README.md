@@ -1,11 +1,51 @@
-# React + TypeScript + Vite
+# React + TypeScript + Vite + shadcn/ui
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This template provides a setup to get React working in Vite with HMR, ESLint rules, and shadcn/ui components.
 
 Currently, two official plugins are available:
 
 - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+## Features
+
+- ⚡️ Vite with HMR and ESLint
+- 🎨 [Tailwind CSS](https://tailwindcss.com/) integration
+- 🧩 [shadcn/ui](https://ui.shadcn.com/) components
+- 📱 Responsive design patterns
+- 🔑 TypeScript strict mode enabled
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js (version 16 or higher)
+- npm
+
+### Adding shadcn Components
+
+```bash
+# Add new shadcn components using the CLI
+npx shadcn-ui@latest add [component-name]
+
+# Example: Adding the button component
+npx shadcn-ui@latest add button
+```
+
+## Project Structure
+
+```
+├── public/
+├── src/
+│   ├── components/
+│   │   └── ui/          # shadcn components
+│   ├── lib/
+│   ├── App.tsx
+│   └── main.tsx
+├── .eslintrc.json
+├── tailwind.config.js
+└── vite.config.ts
+```
 
 ## Expanding the ESLint configuration
 
@@ -48,3 +88,20 @@ export default tseslint.config({
   },
 })
 ```
+
+## Available Scripts
+
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run preview` - Preview production build
+- `npm run lint` - Run ESLint
+
+## License
+
+MIT
+
+## Acknowledgments
+
+- [shadcn/ui](https://ui.shadcn.com/)
+- [Vite](https://vitejs.dev/)
+- [Tailwind CSS](https://tailwindcss.com/)
